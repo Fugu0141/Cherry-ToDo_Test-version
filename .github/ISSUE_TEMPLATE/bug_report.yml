@@ -1,0 +1,92 @@
+name: "Bug report"
+description: "バグや想定外の動作を報告します"
+title: "[Bug]: "
+labels: ["type: bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug!
+
+        Please provide enough information so the problem can be reproduced.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "What happened?"
+      description: "日本語: 何が起きましたか？ バグの内容を具体的に書いてください。"
+      placeholder: "Example: The task date changes after refreshing the page."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+      description: "日本語: 期待していた動作を書いてください。"
+      placeholder: "Example: The task should stay on the selected date."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      description: "日本語: 問題を再現するための手順を書いてください。"
+      placeholder: |
+        1. Open Cherry-ToDo
+        2. Create a task
+        3. Refresh the page
+        4. Check the result
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Version"
+      description: "日本語: 使用しているバージョン、commit hash、または latest main などを書いてください。"
+      placeholder: "Example: v0.1.0 / commit hash / latest main"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "日本語: 使用している環境を選んでください。"
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Android
+        - iOS
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser or runtime"
+      description: "日本語: ブラウザまたは実行環境を書いてください。"
+      placeholder: "Example: Chrome, Firefox, Tauri"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots or recordings"
+      description: "日本語: 必要であれば画像や動画を添付してください。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context"
+      description: "日本語: ほかに役立つ情報があれば書いてください。"
+      placeholder: "Anything else that may help."
+    validations:
+      required: false
